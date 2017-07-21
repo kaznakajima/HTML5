@@ -1,0 +1,449 @@
+﻿@charset "utf-8";
+body {
+	color: #333;
+	background-color: #eeeeee;
+	margin: 0px;
+	padding: 0px;
+	font: 14px/2 "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";	/*文字サイズ/行間、フォントファミリー*/
+}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure{
+	margin: 0px;
+	padding: 0px;
+}
+ul{
+	list-style-type: none;
+}
+img {
+	border: none;
+	vertical-align: bottom;
+}
+input,textarea,select {
+	font-size: 1em;
+}
+form {
+	margin: 0px;
+}
+table {
+	border-collapse:collapse;
+	font-size: 100%;
+	border-spacing: 0;
+}
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	color: #0000ff;
+	text-decoration: none;
+}
+
+#container {
+	width: 1200px;
+	margin: 0px auto;
+}
+
+#container h1 {
+	font-weight: normal;
+	font-size: 10px;
+	text-align: center;
+	line-height: 24px;
+}
+
+header {
+	width: 1200px;
+	height: 300px;
+	position: relative;
+	background-color: #FFF;
+	background-repeat: no-repeat;
+	background-position: right center;
+	-webkit-box-shadow: 0px 0px 8px #999;
+	box-shadow: 0px 0px 8px #999;
+	border-top: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+}
+
+/*画像ブロック*/
+#mainimg {
+	clear: 	left;
+        float: right;
+	width: 860px;
+	height: 300px;
+	position: relative;
+}
+
+/*３枚画像の共通設定*/
+#slide1,#slide2,#slide3 {
+	-webkit-animation-duration: 10s;	/*実行する時間。「s」は秒の事。*/
+	animation-duration: 10s;			/*同上*/
+	-webkit-animation-iteration-count:infinite;	/*実行する回数。「infinite」は無限に繰り返す意味。*/
+	animation-iteration-count:infinite;			/*同上*/
+}
+
+/*はじめ*/
+#slide1 {
+	-webkit-animation-name: slide1;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide1;				/*同上*/
+	position: relative;
+	width: 860px;
+	height: 300px;
+}
+
+/*2番目*/
+#slide2 {
+	-webkit-animation-name: slide2;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide2;				/*同上*/
+	position: absolute;
+	right:0px;
+	top:0px;
+	width: 860px;
+	height: 300px;
+}
+
+/*3番目*/
+#slide3 {
+	-webkit-animation-name: slide3;		/*上で設定しているキーフレーム（keyframes）の名前*/
+	animation-name: slide3;				/*同上*/
+	position: absolute;
+	right:0px;
+	top:0px;
+	width: 860px;
+	height: 300px;
+}
+
+
+
+/*アニメーション*/
+
+/*はじめ*/
+@keyframes slide1 {
+	0% {opacity: 0;}
+	10% {opacity: 1;}
+	30% {opacity: 1;}
+	40% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+/*2番目*/
+@keyframes slide2 {
+	0% {opacity: 0;}
+	30% {opacity: 0;}
+	40% {opacity: 1;}
+	60% {opacity: 1;}
+	70% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+/*3番目*/
+@keyframes slide3 {
+	0% {opacity: 0;}
+	60% {opacity: 0;}
+	70% {opacity: 1;}
+	90% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+header #logo {
+	position: absolute;
+	left: 30px;
+	top: 70px;
+	font-size:32px
+}
+
+
+nav#menu ul {
+	background-color: #FFF;
+	height: 52px;
+	-webkit-box-shadow: 0px 0px 8px #999;
+	box-shadow: 0px 0px 8px #999;
+	margin-bottom: 30px;
+}
+
+nav#menu ul li {
+	float: left;
+	width: 196px;
+}
+
+nav#menu ul li a {
+	height: 42px;
+	padding-top: 8px;
+	line-height: 1.4;
+	text-decoration: none;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	transition: 0.5s;
+	background-color: #c01f4c;
+	text-align: center;
+	color: #FFF;
+	border-bottom: 1px solid #FFF;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+}
+
+nav#menu ul li:first-child a {
+}
+
+nav#menu ul li a:hover,
+
+nav#menu ul li a span {
+	font-size: 9px;
+	display: block;
+	font-weight: normal;
+}
+
+#contents {
+	clear: left;
+	width: 100%;
+}
+
+#main {
+	float: left;
+	width: 770px;
+	background-color: #FFF;
+	padding: 10px;
+	-webkit-box-shadow: 0px 0px 8px #CCC;
+	box-shadow: 0px 0px 8px #CCC;
+	border: 1px solid #CCC;
+	margin-bottom: 30px;
+}
+
+#main h2 {
+	font-size: 100%;
+	color: #FFF;
+	padding: 7px 15px;
+	clear: both;
+	background-color: #ffff00;
+	background: linear-gradient(#00ffff, #0000ff);
+	border-radius:5px;
+	-webkit-box-shadow: 1px 2px 5px #ccc;
+	box-shadow: 1px 2px 5px #ccc;
+}
+
+#main h3 {
+	background-color: #FFF;
+	background: linear-gradient(#ff0000, #cc0000);
+	background-repeat: no-repeat;
+	background-position: left center;
+	-webkit-box-shadow: 1px 2px 5px #e2e2e2;
+	box-shadow: 1px 2px 5px #e2e2e2;
+	font-size: 100%;
+	padding: 4px 10px 4px 20px;
+	clear: both;
+	border: 1px solid #CCC;
+}
+
+#main p {
+	padding: 0.5em 15px 1em;
+}
+
+#main section.list1 section {
+	height: 270px;
+	width: 47%;
+	float: left;
+	line-height: 1.6;
+	margin-left: 14px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 25px;
+}
+
+#main section.list1 section p {
+	padding: 0px;
+}
+
+#main section.list1 section h4 {
+	font-size: 100%;
+	color: #ff2965;
+}
+
+#main section.list1 section figure {
+	padding: 5px;
+	margin-bottom: 5px;
+	border: 1px solid #CCC;
+}
+#main section.list1 section figure img {
+	width: 100%;
+	height: auto;
+}
+
+#main section.list1 section p.more {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+
+#sub {
+	float: right;
+	width: 350px;
+	background-color: #FFF;
+	padding: 10px;
+	-webkit-box-shadow: 0px 0px 8px #CCC;
+	box-shadow: 0px 0px 8px #CCC;
+	border: 1px solid #CCC;
+	margin-bottom: 30px;
+}
+#sub nav {
+	overflow:hidden;
+	border: 1px solid #CCC;
+	border-radius:5px;
+}
+
+#sub h2 {
+	font-size: 100%;
+	text-align: center;
+	padding: 3px 0px;
+	background-color: #ff0000;
+	background: linear-gradient(#00ffff, #0000ff);
+	color: #FFF;
+}
+
+#sub ul.submenu {
+	border-top: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	margin-bottom: 0px;
+}
+
+#sub ul.submenu li a {
+	border-bottom: 1px solid #CCC;
+	text-decoration: none;
+	display: block;
+	padding-left: 10px;
+	background-color: #FFF;
+	background: linear-gradient(#ffffff, #eeeeee);
+	-webkit-box-shadow: 0px 0px 1px #FFF inset;
+	box-shadow: 0px 0px 0px 1px #FFF inset;
+}
+
+#sub ul.submenu li a:hover {
+	background: linear-gradient(#00ff00, #00f000);
+	color: #0000FF;
+	-webkit-box-shadow: none;
+	-webkit-box-shadow: 0px 0px 10px #FF000;
+	box-shadow: 0px 0px 10px #FF0000;
+}
+
+#sub section.box1 {
+	font-size: 11px;
+	border-bottom: 1px solid #CCC;
+	line-height: 1.5;
+	overflow: hidden;
+}
+#sub section.box1 a {
+	padding: 5px;
+	text-decoration: none;
+	display: block;
+	overflow: hidden;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+#sub section.box1 a:hover {
+	background-color: #ff2965;
+	color: #FFF;
+}
+
+#sub section.box1 h4 {
+	margin-left: 68px;
+	font-size: 100%;
+}
+#sub section.box1 p {
+	margin-left: 68px;
+}
+
+#sub section.box1 figure {
+	float: left;
+}
+
+footer {
+	clear: both;
+	text-align: center;
+	color: #FFF;
+	background: linear-gradient(#00ffff, #0000ff);
+	border-radius:5px;
+	-webkit-box-shadow: 0px 0px 8px #999;
+	box-shadow: 0px 0px 8px #999;
+}
+footer .pr {
+	display: block;
+	font-size: 80%;
+}
+footer a {
+	text-decoration: none;
+	color: #FFF;
+}
+footer a:hover {
+	color: #FFF;
+}
+
+#new{
+	margin-bottom: 15px;
+}
+#new dl{
+	overflow: auto;
+	height: 150px;
+	padding-left: 15px;
+}
+
+#new dt {
+	font-weight: bold;
+	float: left;
+	width: 8em;
+}
+
+#new dd {
+	border-bottom: 1px solid #d2d2d2;
+	padding-left: 8em;
+}
+
+#new dd img {
+	vertical-align: middle;
+}
+
+.look {
+	background: #dcdcdc;
+}
+.mb15 {
+	margin-bottom: 15px;
+}
+.clear {
+	clear: both;
+}
+ul.disc {
+	padding: 0em 25px 1em;
+	list-style: disc;
+}
+.color1 {
+	color: #ff2965;
+}
+.pr {
+	font-size: 10px;
+}
+.btn {
+	font-size: 13px;
+}
+.wl {
+	width: 96%;
+}
+.ws {
+	width: 50%;
+}
+.c {
+	text-align: center;
+}
+.r {
+	text-align: right;
+}
+figcaption {
+	font-size: 11px;
+}
+#menubar_hdr {
+	display: none;
+}
+.mini1 {
+	font-size: 11px;
+	font-weight: normal;
+}

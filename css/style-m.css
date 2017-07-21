@@ -1,0 +1,64 @@
+﻿@charset "utf-8";
+
+#container {
+	width: auto;
+	margin: 15px;
+}
+/*h1タグの設定*/
+#container h1 {
+	display: none;
+}
+
+header {
+	width: auto;
+	background-size: 100%;
+	border: none;
+	border-bottom: 1px solid #FFF;
+}
+
+nav#menu ul {
+	height: auto;
+	overflow: hidden;
+}
+
+nav#menu ul li {
+	width: 50%;
+}
+
+nav#menu ul li a {
+	border: none;
+	border-bottom: 1px solid #FFF;
+}
+
+nav#menu ul li:nth-child(odd) {
+	border-left: 1px solid #FFF;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+nav#menu ul li:first-child {
+	display: none;
+}
+
+#contents {
+	width: auto;
+}
+
+#main, #sub {
+	float: none;
+	width: auto;
+}
+
+#main section.list1 section {
+	width: 45%;
+}
+
+img.wa {
+	width: 100%;
+	height: auto;
+}
+
+body.s-n #sub {
+	display: none;
+}
